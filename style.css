@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root{
+    --fonte-tabela: 
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+}
+
+header{
+    background-color: rgb(22, 22, 206);
+    display: flex;
+    padding:0.5%;
+    padding-left: 3%;
+}
+
+.logo{
+    width: 6%;
+    border-radius: 60%;
+}
+
+.encomendas {
+    padding-left: 100px;
+    padding-top: 41px;
+    font-size: 2.8rem;
+}
+
+table{
+    padding-top: 3%;
+    width: 100%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+td, th{
+    padding:5px;
+    border: 3px solid #ddd; 
+}
+
+th{
+    background-color: #ddd;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+hr{
+    margin-top: 40px;
+    margin-left: 5.1%;
+    margin-right: 5.1%;
+    border: 2px solid #ddd;
+}
