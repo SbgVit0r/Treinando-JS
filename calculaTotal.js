@@ -2,34 +2,56 @@
 var clientes = document.querySelectorAll(".cliente")
 
 // Passa por cada encomenda calculando o valor total
-for (let count = 0; count < clientes.length; count++) {
+for (var count = 0; count < clientes.length; count++) {
     
     // Captura a quantidade encomendada
-    var qtde = clientes[count].querySelector(".info-qtde").textContent
-
-    //Captura o valor unitário do produto
-    var unitario = cliente[count].querySelector(".info-valor").textContent
-
-    // Valida a quantidade
-    if(qtde <1 || isNaN(qtde)){
-        //Quantidade NOK, avisa o usuario.
-        clientes[count].querySelector(".info-qtde").textContent = "QTDE INVALIDA!"
-        clientes[count].style.backgroundColor="red"
-    }else{
-        //Quantidade OK, prossegue
-        //Calcula o valor total da encomenda
-        clientes[count].querySelector(".info-total").textContent = calculaTotal(qtde,unitario);
-    }
-
-    // Validar valor unitário
-
-    if (qtd > 7 || isNaN(valor)) {
-        clientes[count].style.backgroundColor="red"
-    }
+    var qtde = clientes[count].querySelector(".info-qtd").textContent
     
+    //Captura o valor unitário do produto
+    var unitario = clientes[count].querySelector(".info-valor").textContent
+    
+    clientes[count].querySelector(".info-valor").textContent = formataValor(unitario);
+
+    validaQtd();
+
+    validaUnitario();
+
+}
+
+function formataValor(valor){
+    valor = parseFloat(valor)
+    return valor.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
 }
 
 function calculaTotal(qtde, unitario){
     var total = 0;
-    total=qtde*unitario;
+    total= formataValor(qtde*unitario);
+    return total;
+}   
+
+function validaQtd(){
+    // Valida a quantidade
+    if(qtde < 1 || isNaN(qtde)){
+        //Quantidade NOK, avisa o usuario.
+        clientes[count].querySelector(".info-qtd").textContent = "QTDE INVALIDA!"
+        clientes[count].querySelector(".info-qtd").style.color="red"
+    }else{
+        //Quantidade OK, prossegue
+        //Calcula o valor total da encomenda
+        clientes[count].querySelector(".info-total").textContent = calculaTotal(qtde,unitario);
+
+    }
 }
+
+function validaUnitario(){
+        // Validar valor unitário
+        if (unitario < 30 || isNaN(unitario)) {
+            clientes[count].querySelector(".info-qtd").textContent = "VALOR INVALIDO!"
+            clientes[count].style.backgroundColor="red"
+        } else{
+            clientes[count].querySelector(".info-total").textContent = calculaTotal(qtde, unitario);
+        }
+}
+
+
+
