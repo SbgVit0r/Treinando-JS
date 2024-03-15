@@ -57,3 +57,53 @@ hr{
     margin-right: 5.1%;
     border: 2px solid #ddd;
 }
+
+.encomendas__novo{
+    padding-left: 100px;
+    padding-top: 41px;
+    font-size: 2rem;
+}
+
+button{
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: blue;
+    box-shadow: 10px 0 0;
+    border-radius: 6px;
+    font-weight: 900;
+    color: white;
+    font-size: 1.2rem;
+}
+
+input{
+    padding:6px;
+    margin-top:6px;
+    width: 12%;
+}
+
+.formulario{
+    padding-top: 1.2%;
+    padding-left: 5%;
+}
+
+.texto-campo{
+    padding-bottom: 5px;
+}
+
+.selecionador{
+    padding:7px;
+    margin-top:6px;
+}
+
+.grupo{
+    display: inline-block;
+    margin:6px;
+}
+
+.grupo2{
+    margin:6px;
+    display: block;
+}

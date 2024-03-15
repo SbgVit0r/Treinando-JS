@@ -17,6 +17,7 @@
 
     <hr>
 
+     <!--Tabela de produtos-->   
     <table>
         <tr>
             <th>Nome</th>
@@ -56,6 +57,38 @@
             <td class="info-total"></td>
         </tr>
     </table>
+    <section class="sessao_adicionar">
+        <h2 class="encomendas__novo">Adicionar nova encomenda</h2>
+
+         <form class="formulario" action="" method="get">
+                <div class="grupo">
+                    <label class="texto-campo" for="nome">Nome:</label><br>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do(a) cliente">
+                </div>
+
+                <div class="grupo">
+                    <label class="texto-campo" for="nome">Quantidade:</label><br>
+                    <input type="number" name="nome" id="nome" placeholder="Digite a quantidade encomendada">
+                </div>
+
+                <div class="grupo2">
+                    <label class="texto-campo" for="nome">Produto:</label><br>
+                    <select class="selecionador" name="nome" id="nome" placeholder="Selecione">
+                        <option value="Calça">Calça</option>
+                        <option value="Cueca">Cueca</option>
+                        <option value="Meia">Meia</option>
+                    </select>
+                </div>
+
+                <div class="grupo2">
+                    <label class="texto-campo" for="nome">Valor Unitário:</label><br>
+                    <input type="number" name="nome" id="nome" placeholder="Digite o valor unitario do produto">
+                </div>
+                <button type="submit">Adicionar</button>
+            </form>
+            
+
     <script src="calculaTotal.js"></script>
+    </section>
 </body>
 </html>
