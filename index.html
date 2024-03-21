@@ -28,14 +28,14 @@
         </tr>
         <tr class="cliente">
             <td class="info-nome">Mariana</td>
-            <td class="info-produto">Camiseta G - Azul</td>
+            <td class="info-produto">Camiseta</td>
             <td class="info-qtd">5</td>
             <td class="info-valor">50</td>
             <td class="info-total"></td>
         </tr>
         <tr class="cliente">
             <td class="info-nome">Carolina</td>
-            <td class="info-produto">Camiseta M - Preta</td>
+            <td class="info-produto">Camisola</td>
             <td class="info-qtd">3</td>
             <td class="info-valor">40</td>
             <td class="info-total"></td>
@@ -43,7 +43,7 @@
         </tr>
         <tr class="cliente">
             <td class="info-nome">Daniele</td>
-            <td class="info-produto">Camiseta P - Marrom</td>
+            <td class="info-produto">Calça</td>
             <td class="info-qtd">7</td>
             <td class="info-valor">30</td>
             <td class="info-total"></td>
@@ -51,7 +51,7 @@
         </tr>
         <tr class="cliente">
             <td class="info-nome">Felipe</td>
-            <td class="info-produto">Regata M - Vermelha</td>
+            <td class="info-produto">Regata </td>
             <td class="info-qtd">5</td>
             <td class="info-valor">35</td>
             <td class="info-total"></td>
@@ -60,7 +60,7 @@
     <section class="sessao_adicionar">
         <h2 class="encomendas__novo">Adicionar nova encomenda</h2>
 
-         <form class="formulario" action="" method="get">
+         <form class="formulario" action="" method="post">
                 <div class="grupo">
                     <label class="texto-campo" for="nome">Nome:</label><br>
                     <input type="text" name="nome" id="nome" placeholder="Digite o nome do(a) cliente">
@@ -68,15 +68,16 @@
 
                 <div class="grupo">
                     <label class="texto-campo" for="nome">Quantidade:</label><br>
-                    <input type="number" name="nome" id="nome" placeholder="Digite a quantidade encomendada">
+                    <input type="number" name="nome" id="qtd" placeholder="Digite a quantidade encomendada">
                 </div>
 
                 <div class="grupo2">
                     <label class="texto-campo" for="nome">Produto:</label><br>
                     <select class="selecionador" name="nome" id="nome" placeholder="Selecione">
                         <option value="Calça">Calça</option>
-                        <option value="Cueca">Cueca</option>
-                        <option value="Meia">Meia</option>
+                        <option value="Cueca">Camiseta</option>
+                        <option value="Meia">Camisola</option>
+                        <option value="Regata">Regata</option>
                     </select>
                 </div>
 
@@ -84,11 +85,12 @@
                     <label class="texto-campo" for="nome">Valor Unitário:</label><br>
                     <input type="number" name="nome" id="nome" placeholder="Digite o valor unitario do produto">
                 </div>
-                <button type="submit">Adicionar</button>
+                <button id="adicionar-encomenda" type="submit">Adicionar</button>
             </form>
             
 
-    <script src="calculaTotal.js"></script>
+    <script src="calculaTotal.js" defer></script>
+    <script src="adicionarRoupa.js" defer></script>
     </section>
 </body>
 </html>

@@ -1,14 +1,14 @@
 // Captura todos os clientes que fizeram encomendas
-var clientes = document.querySelectorAll(".cliente")
+var clientes = document.querySelectorAll(".cliente");
 
 // Passa por cada encomenda calculando o valor total
 for (var count = 0; count < clientes.length; count++) {
     
     // Captura a quantidade encomendada
-    var qtde = clientes[count].querySelector(".info-qtd").textContent
+    var qtde = clientes[count].querySelector(".info-qtd").textContent;
     
     //Captura o valor unitário do produto
-    var unitario = clientes[count].querySelector(".info-valor").textContent
+    var unitario = clientes[count].querySelector(".info-valor").textContent;
 
     clientes[count].querySelector(".info-valor").textContent = formataValor(unitario);
 
